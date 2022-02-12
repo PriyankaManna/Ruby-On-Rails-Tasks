@@ -1,4 +1,5 @@
 # 2. example of each hash method
+
 hash = Hash.new()
 # puts hash.methods
 
