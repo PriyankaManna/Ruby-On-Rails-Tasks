@@ -12,13 +12,17 @@ def sumOftwoElement(numbers,result)
     numbers.each_with_index do |num, idx|
         arr = numbers.slice(0,idx+1)
         arr.each_with_index do |no,index|
-            sum = num + no
-                if sum == result
-                    # puts "#{num} and #{no}"
-                    flag = true
-                    output.push(idx)
-                    output.push(index)
-                    return output
+            if no != num
+                sum = num + no
+                    if sum == result
+                        # puts "#{num} and #{no}"
+                        flag = true
+                       
+                        output.push(index)
+                        output.push(idx)
+
+                        return output
+                    end
                 end
         end
        
@@ -32,10 +36,12 @@ arr = [2,7,11,15]
 p sumOftwoElement(arr,13)
 p sumOftwoElement(arr,22)
 p sumOftwoElement(arr,26)
+p sumOftwoElement(arr,17)
 p sumOftwoElement(arr,60)
 
 # output
-# [2, 0]
-# [2, 2]
-# [3, 2]
+# [0, 2]
+# [1, 3]
+# [2, 3]
+# [0, 3]
 # "No element adds up to produce 60"
