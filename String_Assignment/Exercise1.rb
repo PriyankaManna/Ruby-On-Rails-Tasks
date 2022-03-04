@@ -23,5 +23,5 @@ def longestCommonprefix(string)
 end
 string1 = ["challenge","characteristic","champion"] 
 str = ["Priyanka","Priya","Priyanshu"]
-puts longestCommonprefix(string1)
-puts longestCommonprefix(str)
+puts longestCommonprefix(string1) #cha
+puts longestCommonprefix(str) #Priya
