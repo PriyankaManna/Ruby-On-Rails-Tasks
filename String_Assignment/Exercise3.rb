@@ -4,8 +4,8 @@
 # Expected output: "comminacituon"
 
 def reverseVowels(string)
-    string = string.downcase
-    arr = ["a","e","i","o","u"]
+    
+    arr = ["a","e","i","o","u","A","E","I","O","U"]
     arr2 = []
      for i in 0...string.length
         if arr.include? string[i]
@@ -27,4 +27,4 @@ string = "communication"
 string1 = "PriyankA"
 p reverseVowels(string) #"comminacituon"
 
-p reverseVowels(string1) #"prayanki"
+p reverseVowels(string1) #"prAyanki"
