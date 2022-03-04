@@ -8,14 +8,15 @@
 # end
 
 def longestCommonprefix(string)
-    commonstr = []
+    commonstr = ['No match']
     for i in 0...string[0].length
         
-        commonstr[i] = string[0][0..i]
-        
+        commonstr[i+1] = string[0][0..i]
+        # p commonstr[i]
+
         string.each do |item|
-            if !item.start_with?(commonstr[i])
-                return commonstr[i-1]
+            if !item.start_with?(commonstr[i+1])
+                return commonstr[i]
             end
         end
 
@@ -23,5 +24,7 @@ def longestCommonprefix(string)
 end
 string1 = ["challenge","characteristic","champion"] 
 str = ["Priyanka","Priya","Priyanshu"]
+str2 = ["abc","xyz","bvc"]
 puts longestCommonprefix(string1) #cha
-puts longestCommonprefix(str) #Priya
+puts longestCommonprefix(str) #cha
+puts longestCommonprefix(str2) #Priya
