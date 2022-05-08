@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+
+<%# <%= render @patient %> 
+ <table border="1">
+    <tr>
+    <th>Physician Name</th>
+    <th>Physician email</th>
+    <th>Appointment Date</th>
+    </tr>
+   <% @appointments.each do |appointment| %>
+    <tr>
+   <td> <%= Physician.find(appointment.physician_id).name %></td>
+   <td> <%= Physician.find(appointment.physician_id).email %></td>
+    <td><%=appointment.appointment_date.to_time%></td>  
+   </tr>
+  <% end %>
+   </table>
+<div>
+  <%= link_to "Edit this patient", edit_patient_path(@patient) %> |
+  <%= link_to "Back to patients", patients_path %>
+
+  <%= button_to "Destroy this patient", @patient, method: :delete %>
+</div>

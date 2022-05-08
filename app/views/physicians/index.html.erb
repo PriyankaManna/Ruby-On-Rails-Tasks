@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Physicians</h1>
+<%= link_to "New physician", new_physician_path %>
+<br>
+<br>
+<br>
+<div id="physicians">
+ <table border="1">
+    <tr>
+    <th>Unique Id</th>
+    <th>Name</th>
+    <th>email</th>
+    <th>Show Appointments</th>
+    </tr>
+   <% @physicians.each do |physician| %>
+    <%= render physician %>
+  <% end %>
+</table>
+  
+</div>
+

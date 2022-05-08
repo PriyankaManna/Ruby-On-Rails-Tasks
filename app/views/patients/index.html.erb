@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Patients</h1>
+<%= link_to "New patient", new_patient_path %>
+<br>
+<br>
+<br>
+<div id="patients">
+ <table border="1">
+    <tr>
+    <th>Name</th>
+    <th>email</th>
+    <th>Show Appointments</th>
+    </tr>
+   <% @patients.each do |patient| %>
+    <%= render patient %>
+  <% end %>
+   </table>
+</div>
+   

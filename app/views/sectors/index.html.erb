@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Sectors</h1>
+
+<div id="sectors">
+ <table border="1">
+    <tr>
+    <th>Name</th>
+    <th>Show Industries</th>
+    </tr>
+  <% @sectors.each do |sector| %>
+    <%= render sector %>
+  <% end %>
+   </table>
+</div>
+
+<%= link_to "New sector", new_sector_path %>

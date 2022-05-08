@@ -1,0 +1,20 @@
+
+<p style="color: green"><%= notice %></p>
+
+<table border="1">
+    <tr>
+    <th>Industry Name</th>
+    <th>Destroy Sector</th>
+    </tr>
+   <% @industry.each do |industry| %>
+    <tr>
+   <td> <%= industry.name %></td>
+   <td>  <%= button_to "Destroy this Sector", industries_sector_path(sector_id: params[:id],industry_id: industry.id), method: :delete %> </td>
+
+   </tr>
+  <% end %>
+   </table>
+<div>
+  <%= link_to "Back to sector", sectors_path %>
+
+</div>
