@@ -3,7 +3,7 @@
 	url = https://github.com/PriyankaManna/Ruby-On-Rails-Tasks.git
 [submodule "generatorapp"]
 	path = generatorapp
-	url = https://github.com/PriyankaManna/Ruby-On-Rails-Tasks.git
+	url = https://github.com/PriyankaManna/generatorapp.git
 [submodule "Shoppingapp"]
 	path = Shoppingapp
 	url = https://github.com/PriyankaManna/Ruby-On-Rails-Tasks.git
