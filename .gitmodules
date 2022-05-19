@@ -1,6 +1,6 @@
 [submodule "associationapp"]
 	path = associationapp
-	url = https://github.com/PriyankaManna/Ruby-On-Rails-Tasks.git
+	url = https://github.com/PriyankaManna/associationapp
 [submodule "generatorapp"]
 	path = generatorapp
 	url = https://github.com/PriyankaManna/generatorapp.git
