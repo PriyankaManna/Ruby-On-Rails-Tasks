@@ -1,26 +1,30 @@
-require 'prime'
-
-def double_and_add(num , i)
+def isPrime?(num)
+    (2..Math.sqrt(num)).each { |i| return false if num % i == 0}
+    true
+end
+def double_and_add(num , n)
+    p = 2
+    i = 1
     output = Array.new
-    for p in 2..num do
-        if p.prime?
+    while p <= num
+        flag = true 
+        if isPrime?(p)
             q = p
             result = p
-        for a in 1..i do 
-            result = (2 * result) + 1
-            # puts "#{a}---#{result}---#{q}"
-            if  result.prime? 
-                flag = true 
-            else 
-                flag = false
-                break
+            while i <= n 
+                result = (2 * result) + 1
+                isPrime?(result) ? flag = true : flag = false 
+                #end loop if result is not prime
+                break if flag == false
+                i = i+1
             end
-        end    
-        if flag == true
-            output << q
-        end
-        
-        end 
+            #reset i value
+            i = 1
+            if flag == true
+                output << q
+            end 
+        end  
+        p = p+1
     end
     puts output
 end
