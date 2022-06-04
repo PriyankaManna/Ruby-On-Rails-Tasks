@@ -7,3 +7,6 @@
 [submodule "Shoppingapp"]
 	path = Shoppingapp
 	url = https://github.com/PriyankaManna/Shoppingapp.git
+[submodule "activestorage"]
+	path = activestorage
+	url = https://github.com/PriyankaManna/activestorage
