@@ -9,7 +9,6 @@ N is an integer within the range [1..2,147,483,647].'''
 
 
 puts "Binary gap problem"
-n = 777
 def integer_to_binary(n)
     binary_s = []
     while n > 0
@@ -17,7 +16,8 @@ def integer_to_binary(n)
         binary_s.insert(0,binary)
         n /= 2
     end
-    binary_s
+    p binary_s
+    binary_gap(binary_s)
 end
 
 def binary_gap(binary_of_num)
@@ -33,17 +33,24 @@ def binary_gap(binary_of_num)
                     maxCount+=1;
                     i+=1;
                 end
+                if i >= binary_of_num.length-2 && binary_of_num[i+1] != 1
+                     if count == 0
+                        return 0
+                     else
+                       return count
+                     end
+                end
             end
-            if maxCount > count
-                count = maxCount;
-            end
+            count = maxCount if maxCount > count
         end
         i +=1
     end
     count
 end
-binary_of_num = integer_to_binary(n) 
-p binary_of_num
 
-p binary_gap(binary_of_num)
+
+p integer_to_binary(32)
+p integer_to_binary(78)
+p integer_to_binary(579)
+p integer_to_binary(256)
 
